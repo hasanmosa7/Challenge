@@ -129,13 +129,6 @@ public class Screen4 extends AppCompatActivity implements MicChooseDialog.Interf
         return super.onOptionsItemSelected(item);
     }
 
-    /*private String generateVoiceFilename( int len ){
-        StringBuilder sb = new StringBuilder( len );
-        for( int i = 0; i < len; i++ )
-            sb.append( AB.charAt( rnd.nextInt(AB.length()) ) );
-        return sb.toString();
-    }*/
-
     private void startAudioRecording(){
         mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
         mediaRecorder.setAudioEncoder(MediaRecorder.OutputFormat.AMR_NB);
@@ -188,16 +181,6 @@ public class Screen4 extends AppCompatActivity implements MicChooseDialog.Interf
             mediaPlayer = null;
         }
     }
-
-    /*private void hasSDCard(){
-        Boolean isSDPresent = android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED);
-        if(isSDPresent)        {
-            System.out.println("There is SDCard");
-        }
-        else{
-            System.out.println("There is no SDCard");
-        }
-    }*/
 
     private void stopMediaPlayerPlaying(){
         if(!mediaPlayer.isPlaying()){
